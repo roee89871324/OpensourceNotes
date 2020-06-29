@@ -6,7 +6,10 @@ const { app, ipcMain } = require('electron')
 const Window = require('./Window')
 const DataStore = require('./DataStore')
 
-require('electron-reload')(__dirname)
+// require('electron-reload')(__dirname)
+require('electron-reload')(__dirname, {
+  electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
+});
 
 // create a new todo store name "Todos Main"
 const todosData = new DataStore({ name: 'Todos Main' })
