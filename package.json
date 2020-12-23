@@ -22,7 +22,10 @@
     "electron": "^3.0.4",
     "electron-reload": "^1.2.5",
     "electron-store": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
+    "semantic-ui-react": "^0.88.2",
     "spectre.css": "^0.5.3"
   }
 }

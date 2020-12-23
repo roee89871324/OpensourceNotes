@@ -1,6 +1,8 @@
 'use strict'
 
 const { ipcRenderer } = require('electron')
+const { TextArea } = require('semantic-ui-react')
+// const {Item } = require("./Item")
 
 // delete todo by its text value ( used below in event listener)
 const deleteTodo = (e) => {
@@ -19,7 +21,8 @@ ipcRenderer.on('todos', (event, todos) => {
 
   // create html string
   const todoItems = todos.reduce((html, todo) => {
-    html += `<li class="todo-item">${todo}</li>`
+    html += `<div class="todo-item"><span contenteditable>${todo} </span></div>`
+    // html += <Item content={todo}></Item>
 
     return html
   }, '')
@@ -29,6 +32,6 @@ ipcRenderer.on('todos', (event, todos) => {
 
   // add click handlers to delete the clicked todo
   todoList.querySelectorAll('.todo-item').forEach(item => {
-    item.addEventListener('click', deleteTodo)
+    // item.addEventListener('click', deleteTodo)
   })
 })

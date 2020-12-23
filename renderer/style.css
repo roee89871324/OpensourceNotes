@@ -10,10 +10,22 @@ body {
   font-size: 1rem;
 }
 
-.todo-item:nth-child(even) {
+/* .todo-item:nth-child(even) {
   background: #f4f4ff;
-}
+} */
 
 .todo-item:hover {
   background: #d8d8d8
+}
+
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
 }
